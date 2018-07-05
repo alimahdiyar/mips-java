@@ -77,18 +77,15 @@ public class Mips {
 	 * @param args The path to the input file.
 	 */
 	public static void main(String[] args) {
-		if (args.length < 1) {
-			System.out.println("You must supply an input filename");
-		} else {
-			try {
-				// create the simulator
-				Mips mips = new Mips(args[0]);
-				
-				// run the simulator
-				mips.run();
-			} catch (IOException e) {
-				System.out.println("Error opening file named \"" + args[0] + "\"");
-			}
+		String filename = "/home/alideb/Desktop/mipsjava/out/production/mipsjava/mips/test.txt";
+		try {
+			// create the simulator
+			Mips mips = new Mips(filename);
+
+			// run the simulator
+			mips.run();
+		} catch (IOException e) {
+			System.out.println("Error opening file named \"" + filename + "\"");
 		}
 	}
 	

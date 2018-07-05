@@ -46,8 +46,15 @@ public class MemoryStore {
 			word += getUnsignedValue(b[3]) << 24;
 			
 			// add the word to our memory store
-			memory.add(word);
+			//memory.add(word);
 		}
+		long c;
+        //00000001 00101010 01000000 00100000
+        c = (((long) 0x01) << 24) + (((long) 0x2A) << 16) + (((long) 0x40) << 8) + ((long) 0x20);
+		memory.add(new Long(c));
+        c = ((long) 0xFC) << 24;
+        System.out.println(c);
+		memory.add(new Long(c));
 	}
 	
 	/**

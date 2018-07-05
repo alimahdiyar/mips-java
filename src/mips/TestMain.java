@@ -19,6 +19,7 @@ public class TestMain {
         b[5] = 0x00;
         b[6] = 0x00;
         b[7] = 0x00;
+
         //00000001 00101010 01000000 00100000
         //2 50 64 32
         FileOutputStream output = new FileOutputStream("/home/alideb/Desktop/mipsjava/out/production/mipsjava/mips/test.txt");

@@ -30,8 +30,9 @@ public class Fetch extends PipelineStage {
 		if_id.setValue(RegisterName.INSTRUCTION, instruction);
 		if_id.setValue(RegisterName.OP_CODE, 0);
 		if_id.setValue(RegisterName.PC, pc.getValue());
-		
-		if (instruction != HALT_INSTRUCTION) {
+		System.out.println(Integer.toBinaryString(HALT_INSTRUCTION) + " " + Long.toBinaryString(instruction));
+
+		if (!Long.toBinaryString(instruction).equals(Integer.toBinaryString(HALT_INSTRUCTION))) {
 			pc.increment();
 		}
 	}

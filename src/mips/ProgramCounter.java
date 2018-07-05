@@ -5,7 +5,7 @@ package mips;
  * be executed next.
  */
 public class ProgramCounter extends Register {
-	private static final int FIRST_INSTRUCTION = 0x1000;
+	public static final int FIRST_INSTRUCTION = 0;
 	
 	/**
 	 * Create a program counter and initialize it to the first instruction
